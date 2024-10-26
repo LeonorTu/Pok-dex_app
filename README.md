@@ -34,13 +34,12 @@ To run the Pokédex App locally, follow these steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone git@github.com:Lisly25/webdev-express.git
-   cd pokedex_app
+   git clone git@github.com:LeonorTu/Pokedex_app.git && cd Pokedex_app
    ```
 
 2. **Set up the frontend**:
 	```bash
-	cd frontend/pokedex_app
+	cd pokedex_app
 	npm install
 	npm run dev
 	```
