@@ -15,11 +15,10 @@ Welcome to the Pokédex App! This application allows users to explore and intera
 - **Frontend**:
   - React.js
   - Tailwind CSS for styling
-  - React Testing Library for testing
 
 - **Backend**:
-  - Express.js
   - Node.js
+  - Express.js
 
 - **Database**:
   - PostgreSQL (managed via Docker)
