@@ -38,7 +38,7 @@ To run the Pokédex App locally, follow these steps:
 
 2. **Set up the frontend**:
 	```bash
-	cd pokedex_app
+	cd frontend
 	npm install
 	npm run dev
 	```
