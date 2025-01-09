@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useLocation, useNavigate } from 'react-router-dom';
-import logo from '../../img/logo.png';
+import logo from '../img/logo.png';
 import './pokedex.css';
 import SearchBar from '../components/PokedexUtils/SearchBar'
 import TypeFilter from '../components/PokedexUtils/TypeFilter'

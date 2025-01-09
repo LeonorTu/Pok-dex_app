@@ -112,8 +112,8 @@ const Community = () => {
             key={pageNumber}
             className={
               currentPage === pageNumber
-                ? "text-rose-700 border-pink-950 border-2 p-2 m-3 rounded-lg bg-rose-300"
-                : "text-rose-400 border-pink-950 border-2 p-2 m-2 rounded-md bg-rose-100"
+                ? "text-yellow-700 border-yellow-950 border-2 p-2 m-3 rounded-lg bg-yellow-300"
+                : "text-yellow-400 border-yellow-950 border-2 p-2 m-2 rounded-md bg-yellow-100"
             }
             onClick={() => handlePagination({ pageNumber })}
           >
@@ -125,57 +125,61 @@ const Community = () => {
   };
 
   return (
-      <section>
-        <h1 className="text-rose-900 font-pokemon text-center text-7xl my-10">
-          Our community
-        </h1>
-        <div className="flex justify-center">
-          <h2 className="mx-4 font-mono text-rose-950">
-            Search users by name:{" "}
-          </h2>
-          <form >
-            <input
-              name="searchField"
-              value={searchQuery}
-              onChange={handleSearch}
-              className="bg-rose-200 content-center"
-              type="text"
-            />
-          </form>
-        </div>
-        <div className="">
-          { (loading) && <HolyLoader/>  }
-          { (!loading && userList.length === 0) && <h2 className="text-5xl m-10 p-10 text-center font-pokemon">No matches found</h2>}
-          {
-            (!loading && userList.length > 0) &&
-            (
-              <ul className="m-20 grid grid-cols-4 gap-40">
-                {currentPageUsersState.map((user) => {
-
-                  return (
-                    <li className="max-w-64 max-h-64 flex justify-center items-center p-5 text-center text-3xl" key={user.name}>
-                      <a href={"/users/" + user.name}>
-                        {user.name}
-                        <br />
-                        <br />
-                        <img className="" src={`data:image/jpeg;base64,${user.profile_pic}`} />
-                      </a>
-                    </li>
-                  );
-                  })}
-                </ul>
-            )
-          }
-        </div>
-        {(!loading) &&
-          <Pagination
-            currentPage={currentPage}
-            length={userList.length}
-            usersPerPage={usersPerPage}
+    <section>
+      <h1 className='text-[#2B56A8] text-center text-7xl my-10'>
+        Our community
+      </h1>
+      <div className='flex justify-center'>
+        <h2 className='mx-4 font-mono text-[#2B56A8]'>
+          Search users by name:{' '}
+        </h2>
+        <form>
+          <input
+            name='searchField'
+            value={searchQuery}
+            onChange={handleSearch}
+            className='bg-yellow-200 content-center'
+            type='text'
           />
-        }
-      </section>
-  );
+        </form>
+      </div>
+      <div className=''>
+        {loading && <HolyLoader />}
+        {!loading && userList.length === 0 && (
+          <h2 className='text-5xl m-10 p-10 text-center '>No matches found</h2>
+        )}
+        {!loading && userList.length > 0 && (
+          <ul className='m-20 grid grid-cols-4 gap-40'>
+            {currentPageUsersState.map((user) => {
+              return (
+                <li
+                  className='max-w-64 max-h-64 flex justify-center items-center p-5 text-center text-3xl'
+                  key={user.name}
+                >
+                  <a href={'/users/' + user.name}>
+                    {user.name}
+                    <br />
+                    <br />
+                    <img
+                      className=''
+                      src={`data:image/jpeg;base64,${user.profile_pic}`}
+                    />
+                  </a>
+                </li>
+              )
+            })}
+          </ul>
+        )}
+      </div>
+      {!loading && (
+        <Pagination
+          currentPage={currentPage}
+          length={userList.length}
+          usersPerPage={usersPerPage}
+        />
+      )}
+    </section>
+  )
 };
 
 export default Community;

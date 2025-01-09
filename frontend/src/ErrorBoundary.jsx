@@ -21,7 +21,7 @@ class ErrorBoundary extends Component {
       return (
         <div className="flex flex-col items-center justify-center h-screen">
           <img 
-            src="../img/pikachu.png"
+            src="/img/pikachu.png"
             alt="Sad Pikachu"
             className="w-40 h-40 mb-4" 
           />
