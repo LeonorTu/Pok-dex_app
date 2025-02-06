@@ -1,9 +1,9 @@
 import React from 'react'
-import UserLikedPokemon from '../components/UserLikedPokemon'
+import UserLikedPokemon from '../components/pokemon/UserLikedPokemon'
 import { useState, useContext, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import AuthContext from '../AuthContext'
-import UserDislikedPokemon from '../components/UserDislikedPokemon'
+import UserDislikedPokemon from '../components/pokemon/UserDislikedPokemon'
 import defaultProfilePic from '../img/no_profile_pic.jpg'
 
 const Profile = () => {

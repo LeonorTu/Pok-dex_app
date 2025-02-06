@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useContext } from 'react'
 
 import { useNavigate } from 'react-router-dom' // for redirecting to profile page
-import AuthContext from '../AuthContext' // for checking if user is authenticated
+import AuthContext from '../../AuthContext' // for checking if user is authenticated
 
 const LoginForm = (props) => {
   const [username, setUsername] = useState('')
